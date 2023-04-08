@@ -1,17 +1,9 @@
 function sum(fromN, toN) {
-  // Sum all the values from fromN up to toN
-  // base case - when reach toN
-  let result = 0;
-
   if (fromN === toN) {
-    result += fromN;
-    return result;
+    return toN;
   }
-  result += fromN;
 
-  fromN++;
-
-  return result + sum(fromN, toN);
+  return fromN + sum(fromN + 1, toN);
 }
 
 console.log(sum(3, 7));
